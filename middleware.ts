@@ -17,9 +17,7 @@ export default auth((req) => {
   }
 
   if (!isLoggedIn && isProtectedRoute) {
-    return Response.redirect(
-      new URL(`/sign-in`, nextUrl),
-    );
+    return Response.redirect(new URL(`/sign-in`, nextUrl));
   }
 
   return null;
